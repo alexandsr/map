@@ -9,6 +9,7 @@ L.tileLayer('     https://tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png?ap
 	maxZoom: 22
 }).addTo(map);
 
+
 var features = new L.featureGroup
 // Add the GeoJSON data
 $.getJSON("visited/northAmRegions.geojson",function(data){
@@ -19,6 +20,13 @@ L.geoJson(data, {
             case 'n':   return { "color": "#fff", "weight": 0, "opacity": 0.00 };
             case 'l':   return { "color": "#1B3035", "weight": 2, "opacity": 0.65 };
         }
+},
+onEachFeature: function(feature, layer) {
+    if (feature.properties.status === 'y') {
+        layer.bindPopup(String(feature.properties.year));
+    } else if (feature.properties.status === 'l') {
+        layer.bindPopup(String(feature.properties.year));
+    }
 }}).addTo(map);});
 
 $.getJSON("visited/europeRegions.geojson",function(data){
@@ -29,11 +37,16 @@ L.geoJson(data, {
             case 'n':   return { "color": "#fff", "weight": 0, "opacity": 0.00 };
             case 'l':   return { "color": "#1B3035", "weight": 2, "opacity": 0.65 };
         }
+},
+onEachFeature: function(feature, layer) {
+    if (feature.properties.status === 'y') {
+        layer.bindPopup(String(feature.properties.year));
+    } else if (feature.properties.status === 'l') {
+        layer.bindPopup(String(feature.properties.year));
+    }
 }}).addTo(features);});
 features.addTo(map)
 
 function fitBounds() {
-    var bounds = features.getBounds();
-    map.fitBounds(bounds);
     console.log("Finished Fitting Map Bounds to Map Plots")
 }

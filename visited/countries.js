@@ -19,6 +19,13 @@ L.geoJson(data, {
             case 'n':   return { "color": "#fff", "weight": 0, "opacity": 0.00 };
             case 'l':   return { "color": "#1B3035", "weight": 2, "opacity": 0.65 };
         }
+},
+onEachFeature: function(feature, layer) {
+    if (feature.properties.status === 'y') {
+        layer.bindPopup(String(feature.properties.year));
+    } else if (feature.properties.status === 'l') {
+        layer.bindPopup(String(feature.properties.year));
+    }
 }}).addTo(features);});
 features.addTo(map)
 
