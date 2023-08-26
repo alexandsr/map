@@ -1,52 +1,35 @@
 .schoolIcon {
     filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%);
-    opacity: 0.5; 
 }
 
 .hotelIcon {
-    filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%);
-    opacity: 0.5; 
- 
+    filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%); 
 }
 
 .houseIcon {
-    opacity: 0.5; 
-
     filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%); 
 }
 
 .campsiteIcon {
-    opacity: 0.5; 
-
     filter: invert(34%) sepia(49%) saturate(591%) hue-rotate(154deg) brightness(97%) contrast(93%); 
 }
 
 .airportIcon {
-    opacity: 0.5; 
-
     filter: invert(21%) sepia(44%) saturate(1444%) hue-rotate(149deg) brightness(93%) contrast(101%);
 }
 
 .trainIcon {
-    opacity: 0.5; 
-
     filter: invert(9%) sepia(96%) saturate(4917%) hue-rotate(346deg) brightness(98%) contrast(99%);
 }
 
 .busIcon {
-    opacity: 0.5; 
-
     filter: invert(32%) sepia(15%) saturate(6336%) hue-rotate(350deg) brightness(96%) contrast(86%);
 }
 
 .boatIcon {
-    opacity: 0.5; 
-
     filter: invert(19%) sepia(9%) saturate(2665%) hue-rotate(260deg) brightness(102%) contrast(92%);
 }
 .beachIcon {
-    opacity: 0.5; 
-
     filter: invert(19%) sepia(9%) saturate(2665%) hue-rotate(260deg) brightness(102%) contrast(92%);
 }
 
